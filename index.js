@@ -34,7 +34,7 @@ var createCoffeePreprocessor = function(args, config, logger, helper) {
 
     if (result.v3SourceMap) {
       map = JSON.parse(result.v3SourceMap)
-      map.sources[0] = path.basename(file.originalPath)
+      map.sources[0] = (file.originalPath)
       map.sourcesContent = [content]
       map.file = path.basename(file.path)
       file.sourceMap = map;
